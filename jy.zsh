@@ -11,6 +11,17 @@ alias it.new='ssh -o SendEnv=LC_NAME -l root 10.0.64.6'
 
 alias gs='git status -s'
 
+alias master='git cd master'
+alias develop='git cd develop'
+alias us='git cd release-us'
+alias tw='git cd release-tw'
+alias th='git cd release-th'
+alias vz='git cd release-vz'
+
+alias en="cdi us en_US"
+alias am="cdi us am"
+alias de="cdi us de-DE"
+
 blue()
 {
     echo -e "\x1b[34m\x1b[1m\"$*\"\x1b[0m"
@@ -179,6 +190,3 @@ function cdi()
 
     cd "$lang"
 }
-alias en="cdi us en_US"
-alias am="cdi us am"
-alias de="cdi us de-DE"
