@@ -617,6 +617,14 @@ function pdump()
     file=$1
     php -r "require '/mnt/htdocs/farm/vendor/autoload.php'; dump(require '$file');"
 }
+function entity()
+{
+	if [ $# -ne 1 ]; then
+		echo "Usage: ${FUNCNAME[0]} {store id}"
+		return
+	}
+	php /mnt/htdocs/tools/application/DataViz/Store/entity.php --id $id
+}
 alias db3="mysql -h 10.0.64.56 -u jiangyu -pnotification farm_dev5"
 function test_guild()
 {
